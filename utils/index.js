@@ -1,10 +1,10 @@
-export function TreeNode(val, left, right) {
+function TreeNode(val, left, right) {
   this.val = val === undefined ? 0 : val;
   this.left = left === undefined ? null : left;
   this.right = right === undefined ? null : right;
 }
 
-export const convertArrayToTreeNode = (arr) => {
+const convertArrayToTreeNode = (arr) => {
   if (!arr.length) return null;
   const root = new TreeNode(arr[0]);
   const tns = [root];
@@ -17,4 +17,9 @@ export const convertArrayToTreeNode = (arr) => {
   }
 
   return root;
+};
+
+module.exports = {
+  TreeNode,
+  convertArrayToTreeNode,
 };
